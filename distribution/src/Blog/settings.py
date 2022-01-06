@@ -107,7 +107,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIR_URL = '/media/'
+MEDIR_URL = 'media/'
 STATICFILES_DIRS = [BASE_DIR / "static_in_env",
                     ]
 VENV_PATH = os.path.dirname(BASE_DIR)
