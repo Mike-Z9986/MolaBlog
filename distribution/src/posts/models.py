@@ -1,3 +1,4 @@
+from functools import lru_cache
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -15,7 +16,7 @@ class Category(models.Model):
 
     def __str__(self) -> str:
         return self.title
-
+        
 class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField()
@@ -23,7 +24,7 @@ class Post(models.Model):
     comment_count = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnail = models.ImageField()
-    Categories = models.ManyToManyField(Category)
+    categories = models.ManyToManyField(Category)
     featured = models.BooleanField()
 
     def __str__(self) -> str:
