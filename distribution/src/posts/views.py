@@ -14,7 +14,8 @@ def index(request):
         new_signup = Signup()
         new_signup.email = email
         new_signup.save()
-        
+
+    # 字典维护以上类型博客并传给index.html    
     context = {
         'object_list' : featured,
         'latest' : latest,
@@ -22,7 +23,11 @@ def index(request):
     return render(request, 'index.html', context)   
 
 def blog(request):
-    return render(request, 'blog.html', {}) 
+    post_list = Post.objects.all()
+    context = {
+        'post_list' : post_list,
+    }
+    return render(request, 'blog.html', context) 
 
 def post(request):
     return render(request, 'post.html', {}) 
