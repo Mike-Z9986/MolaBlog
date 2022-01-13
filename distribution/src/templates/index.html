@@ -3,7 +3,10 @@
 
 {% block content %}
 
-    
+{% comment %} 网易云文件外链格式 http://music.163.com/song/media/outer/url?id=433107530.mp3 {% endcomment %}
+    <audio autoplay="autoplay" loop="loop" preload="auto" controls="controls"
+        src="http://music.163.com/song/media/outer/url?id=433107530.mp3">       
+    </audio>
     <!-- Hero Section-->
     <section style="background: url({% static 'img/hero.jpg' %}); background-size: cover; background-position: center center" class="hero">
       <div class="container">
