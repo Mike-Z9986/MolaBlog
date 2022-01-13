@@ -6,6 +6,10 @@
 <body>
     {% include 'header.html' %}
 
+    {% comment %} 网易云文件外链格式 http://music.163.com/song/media/outer/url?id=433107530.mp3 {% endcomment %}
+    <audio autoplay="autoplay" loop="loop" preload="auto" controls="controls"
+            src="http://music.163.com/song/media/outer/url?id=433107530.mp3">       
+    </audio>
     {% block content %}
     {% endblock content %}
 
