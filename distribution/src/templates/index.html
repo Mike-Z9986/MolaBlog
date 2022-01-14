@@ -118,7 +118,7 @@
               <form action="#" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                  <input type="email" name="email" id="email" placeholder="输入订阅邮箱地址">
+                  {{ form }}
                   <button type="submit" class="submit">订阅</button>
                 </div>
               </form>
@@ -139,7 +139,7 @@
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="img/gallery-3.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-3.jpg' %}" alt="..." class="img-fluid">
+          <div class="item"><a href="img/gallery-3.jpg" d ata-fancybox="gallery" class="image"><img src="{% static 'img/gallery-3.jpg' %}" alt="..." class="img-fluid">
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
