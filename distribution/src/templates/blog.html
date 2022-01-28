@@ -3,7 +3,8 @@
 
 {% block content %}
 
-    
+
+
     <div class="container">
       <div class="row">
         <!-- Latest Posts -->
@@ -36,7 +37,7 @@
                 </div>
               </div>
               {% endfor %}
-            </div>  
+            </div>
             <!-- Pagination -->
             <nav aria-label="Page navigation example">
               <ul class="pagination pagination-template d-flex justify-content-center">
@@ -70,6 +71,5 @@
         {% include 'sidebar.html' with most_recent=most_recent category_count=category_count %}
       </div>
     </div>
-   
 
-  {% endblock content %}
+{% endblock content %}
