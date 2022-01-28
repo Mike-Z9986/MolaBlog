@@ -47,6 +47,8 @@ class Post(models.Model):
     content = HTMLField()
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
+    
+    # author外键
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnail = models.ImageField()
     categories = models.ManyToManyField(Category)
